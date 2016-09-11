@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>主页</title>
+</head>
+
+<body>
+    <iframe id="cam" width="320" height="240" frameBorder="0" scrolling="no" src="#"></iframe>
+    <script>
+        //mjpg_streamer -i "input_uvc.so -y -n -f 30 -r 320x240" -o "output_http.so -p 8080 -n -w /www/webcam"
+        //http://192.168.137.3/arduino/123/ 
+        var cam = document.getElementById("cam");
+        var hostname = window.location.hostname;
+        hostname = "192.168.137.3";
+        cam.src = "http://"+hostname+":8080/javascript_simple.html";
+    </script>  
+    <input id="slider1" type="range" min="50" max="255" step="1" value="50" onchange="Send()" />
+    <input type="text" id="textBox1"></input>
+    <script>
+        var textBox1 = document.getElementById("textBox1");
+        var slider1 = document.getElementById("slider1");
+        function Send()
+        {
+            textBox1.value = slider1.value;
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", "http://192.168.137.3/arduino/camera/horizon/"+slider1.value, true ); // false for synchronous request
+            xmlHttp.send(null);
+        }
+    </script> 
+</body>
+
+</html>
