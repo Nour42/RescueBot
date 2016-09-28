@@ -1,0 +1,9 @@
+RescueBot/RescueBot/Debug/core.a
+*.d
+*.o
+RescueBot/RescueBot/Debug/board.buildinfo
+*.elf
+RescueBot/RescueBot/Debug/RescueBot.hex
+*.hex
+Solution-Encyclopedia.md
+*.pdf
