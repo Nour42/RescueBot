@@ -1,12 +1,5 @@
 #include "L298N.h"
 
-struct Motor {
-	int in1;
-	int in2;
-	int pwn;
-};
-
-Motor motors[2];
 
 L298N::L298N(int ena, int in1, int in2, int in3, int in4, int enb) {
 	pinMode(ena, OUTPUT);

@@ -121,4 +121,4 @@ function enable_camera()
     cam.src = cam.src;
 }
 //mjpg_streamer -i "input_uvc.so -y -n -f 30 -r 320x240" -o "output_http.so -p 8080 -n -w /www/webcam"
-        
+//mac	B4:21:8A:F0:33:F4

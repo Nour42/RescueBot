@@ -3,6 +3,12 @@
 
 #include "Arduino.h"
 
+struct Motor {
+	int in1;
+	int in2;
+	int pwn;
+};
+
 class L298N
 {
 public:
@@ -19,7 +25,7 @@ public:
 	void turn_left(int speed, int delay_time);
 	void backward(int speed, int delay_time);
 private:
-	struct Motor;
+	Motor motors[2];
 	int _ena;
 	int _in1;
 	int _in2;

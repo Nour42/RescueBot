@@ -21,15 +21,12 @@
     <ClInclude Include="__vm\.RescueBot.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CommandHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PWMFrequency.h">
+    <ClInclude Include="L298N.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CommandHandler.cpp">
+    <ClCompile Include="L298N.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
